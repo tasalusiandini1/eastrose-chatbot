@@ -1,0 +1,73 @@
+{
+  "namaToko": "EastRose",
+  "shopeeUrl": "https://shopee.co.id/shop/238804711",
+  "whatsapp": "6281234567890",
+  "lokasi": "",
+  "deskripsi": "EastRose adalah brand fashion wanita lokal di Shopee dengan koleksi atasan, dress, celana jeans, rok/skort, dan cardigan bergaya Korean chic, kasual, hingga semi formal.",
+  "kategoriRules": {
+    "Dress": [
+      "dress",
+      "gaun"
+    ],
+    "Cardigan & Knit": [
+      "cardigan",
+      "knit",
+      "sweater"
+    ],
+    "Rok & Skort": [
+      "skort",
+      "skirt",
+      "rok"
+    ],
+    "Celana": [
+      "jeans",
+      "pants",
+      "celana",
+      "kulot"
+    ],
+    "Atasan": [
+      "top",
+      "shirt",
+      "kemeja",
+      "blouse",
+      "blus",
+      "outer",
+      "vest",
+      "atasan"
+    ]
+  },
+  "faq": [
+    {
+      "keywords": [
+        "cara pesan",
+        "cara order",
+        "cara beli",
+        "gimana order",
+        "gimana beli",
+        "checkout"
+      ],
+      "jawaban": "Cara pemesanan:\n1. Buka link produk yang kakak inginkan di Shopee\n2. Pilih varian & jumlah, lalu klik *Beli Sekarang*\n3. Selesaikan pembayaran di Shopee\n\nSemua transaksi dilakukan melalui Shopee agar aman 😊\n\n{{kontak}}"
+    },
+    {
+      "keywords": [
+        "kontak",
+        "alamat",
+        "lokasi toko",
+        "nomor wa",
+        "nomor hp",
+        "hubungi"
+      ],
+      "jawaban": "Informasi kontak toko:\n{{kontak}}"
+    },
+    {
+      "keywords": [
+        "ongkir",
+        "ongkos kirim",
+        "pengiriman",
+        "ekspedisi",
+        "kurir"
+      ],
+      "jawaban": "Ongkos kirim dan pilihan kurir dihitung otomatis oleh Shopee sesuai alamat kakak saat checkout. Silakan cek di halaman produk ya 😊\n\n{{kontak}}"
+    }
+  ]
+}

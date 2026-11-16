@@ -1,0 +1,14 @@
+{
+  "name": "tugas-lapak-chatbot-rag",
+  "version": "1.0.0",
+  "description": "Website katalog lapak Shopee dengan chatbot RAG (Groq) + gateway WhatsApp",
+  "private": true,
+  "scripts": {
+    "dev": "node dev-server.js",
+    "clean-csv": "node scripts/clean-csv.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "groq-sdk": "^1.6.0"
+  }
+}
