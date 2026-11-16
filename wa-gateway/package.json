@@ -1,0 +1,11 @@
+{
+  "name": "lapak-wa-gateway",
+  "version": "1.0.0",
+  "description": "Gateway WhatsApp yang meneruskan pesan ke API chatbot RAG lapak",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Toko</title>
+  <meta name="description" content="Katalog produk lapak Shopee dengan asisten chatbot berbasis RAG.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">Katalog Lapak Shopee · Proyek Praktikum</p>
+        <h1 id="storeName">Memuat toko…</h1>
+        <p id="storeDesc" class="hero-desc"></p>
+        <div class="hero-actions">
+          <a id="shopeeLink" class="btn btn-primary" href="#" target="_blank" rel="noopener">Kunjungi di Shopee</a>
+          <a id="waLink" class="btn btn-ghost" href="#" target="_blank" rel="noopener">Chat via WhatsApp</a>
+          <button id="openChatHero" class="btn btn-ghost" type="button">Tanya Asisten AI</button>
+        </div>
+      </div>
+      <dl class="stats">
+        <div><dt>Produk</dt><dd id="statProducts">–</dd></div>
+        <div><dt>Kategori</dt><dd id="statCategories">–</dd></div>
+        <div><dt>Mulai dari</dt><dd id="statMinPrice">–</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="toolbar" aria-label="Filter produk">
+      <input id="searchInput" type="search" placeholder="Cari produk… (misal: jeans, dress, skort)" aria-label="Cari produk">
+      <select id="sortSelect" aria-label="Urutkan">
+        <option value="default">Urutan asli</option>
+        <option value="laris">Terlaris</option>
+        <option value="murah">Harga termurah</option>
+        <option value="mahal">Harga termahal</option>
+      </select>
+    </section>
+    <div id="categoryChips" class="chips" role="tablist" aria-label="Kategori"></div>
+    <p id="resultInfo" class="result-info"></p>
+    <section id="productGrid" class="grid" aria-live="polite">
+      <p class="empty">Memuat produk…</p>
+    </section>
+    <div class="more-wrap"><button id="loadMore" class="btn btn-ghost hidden" type="button">Tampilkan lebih banyak</button></div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Data produk diambil dari lapak <a id="footerShopee" href="#" target="_blank" rel="noopener">Shopee</a> menggunakan web scraping (Instant Data Scraper). Harga dapat berubah sewaktu-waktu — cek halaman Shopee untuk informasi terbaru.</p>
+      <p class="muted">Tugas Praktikum · Artificial Intelligence and Its Application · Chatbot RAG + Groq LLM</p>
+    </div>
+  </footer>
+
+  <!-- Widget Chatbot RAG -->
+  <button id="chatToggle" class="chat-toggle" type="button" aria-label="Buka asisten chat">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+
+  <section id="chatPanel" class="chat-panel hidden" aria-label="Asisten chat">
+    <div class="chat-head">
+      <div>
+        <strong id="chatTitle">Asisten Toko</strong>
+        <span class="chat-sub">Dijawab AI berdasarkan katalog toko</span>
+      </div>
+      <button id="chatClose" class="icon-btn" type="button" aria-label="Tutup chat">✕</button>
+    </div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div id="chatSuggestions" class="chat-suggestions">
+      <button type="button">Produk apa saja yang dijual?</button>
+      <button type="button">Produk termurah apa?</button>
+      <button type="button">Rekomendasi produk terlaris</button>
+    </div>
+    <form id="chatForm" class="chat-form">
+      <input id="chatInput" type="text" placeholder="Tulis pertanyaan…" autocomplete="off" maxlength="500" aria-label="Pesan">
+      <button type="submit" class="btn btn-primary" aria-label="Kirim">Kirim</button>
+    </form>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
